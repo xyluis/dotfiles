@@ -5,7 +5,7 @@
 Import-Module posh-git
 Import-Module oh-my-posh
 
-$ThemePath = Join-Path $env:USERPROFILE "AppData\Local\oh-my-posh\themes"
+$ThemePath = Join-Path $env:USERPROFILE ".config\dotfiles\powershell"
 $Theme = Join-Path $ThemePath "spaceship.omp.json"
 
 oh-my-posh init pwsh --config $Theme | Invoke-Expression
@@ -27,4 +27,4 @@ function which ($command) {
         Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
-# NOTE: In main Powershell profile, insert: ". $env:USERPROFILE\.config\profile.ps1"
+# NOTE: In main Powershell profile, insert: ". $env:USERPROFILE\.config\dotfiles\powershell\profile.ps1"
