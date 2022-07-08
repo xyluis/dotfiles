@@ -5,7 +5,7 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "lightYellow",
+          "foreground": "yellow",
           "style": "plain",
           "template": "{{ .UserName }} ",
           "type": "session"
@@ -22,7 +22,7 @@
         {
           "foreground": "#ff94df",
           "properties": {
-            "branch_icon": " <#ff94df><b>\ue0a0 </b></>",
+            "branch_icon": "<#ff94df><b>\ue0a0 </b></>",
             "fetch_stash_count": true
           },
           "style": "plain",
@@ -32,8 +32,14 @@
         {
           "type": "node",
           "style": "plain",
-          "foreground": "lightGreen",
-          "template": "<#ffffff>via</> \uE718 {{ .Full }} "
+          "foreground": "green",
+          "template": "<#ffffff>via</> ⬢ v{{ .Full }} "
+        },
+        {
+          "type": "npm",
+          "style": "plain",
+          "foreground": "red",
+          "template": "<#ffffff>via</> 📦 v{{ .Full }} "
         }
       ],
       "type": "prompt"
@@ -43,9 +49,9 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "lightGreen",
+          "foreground": "green",
           "style": "plain",
-          "template": "\u276f",
+          "template": "❯",
           "type": "text"
         }
       ],
