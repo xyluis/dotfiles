@@ -40,6 +40,16 @@
           "style": "plain",
           "foreground": "red",
           "template": "<#ffffff>via</> 📦 v{{ .Full }} "
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "yellow",
+          "template": "<#ffffff>took</> {{ .FormattedMs }} ",
+          "properties": {
+            "threshold": 500,
+            "style": "austin"
+          }
         }
       ],
       "type": "prompt"
