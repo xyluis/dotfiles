@@ -2,8 +2,9 @@
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
 # Oh My Posh
+# winget install JanDeDobbeleer.OhMyPosh -s winget
+# Install-Module posh-git -Scope CurrentUser -Force
 Import-Module posh-git
-Import-Module oh-my-posh
 
 $ThemePath = Join-Path $env:USERPROFILE ".config\powershell"
 $Theme = Join-Path $ThemePath "spaceship.omp.json"
@@ -11,6 +12,7 @@ $Theme = Join-Path $ThemePath "spaceship.omp.json"
 oh-my-posh init pwsh --config $Theme | Invoke-Expression
 
 # PSReadLine
+# Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -BellStyle None
 Set-PSReadLineOption -PredictionSource History
