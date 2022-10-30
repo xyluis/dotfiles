@@ -11,6 +11,10 @@ $Theme = Join-Path $ThemePath "spaceship.omp.json"
 
 oh-my-posh init pwsh --config $Theme | Invoke-Expression
 
+# Terminal-Icons
+# Install-Module -Name Terminal-Icons -Repository PSGallery
+Import-Module -Name Terminal-Icons
+
 # PSReadLine
 # Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 Set-PSReadLineOption -EditMode Emacs
