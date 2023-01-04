@@ -26,6 +26,7 @@ $env:GIT_SSH = "C:\Windows\system32\OpenSSH\ssh.exe"
 
 # Alias
 Set-Alias grep findstr
+Set-Alias code code-insiders
 
 # Utilities
 function which ($command) {
