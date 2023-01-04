@@ -24,7 +24,7 @@ Set-PSReadLineOption -PredictionSource History
 # Env
 $env:GIT_SSH = "C:\Windows\system32\OpenSSH\ssh.exe"
 
-# Alias
+# Aliases
 Set-Alias grep findstr
 Set-Alias code code-insiders
 
