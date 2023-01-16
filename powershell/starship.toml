@@ -125,3 +125,6 @@ symbol = " "
 
 [spack]
 symbol = "🅢 "
+
+[username]
+show_always = true
