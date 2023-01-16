@@ -4,12 +4,17 @@
 # Oh My Posh
 # winget install JanDeDobbeleer.OhMyPosh -s winget
 # Install-Module posh-git -Scope CurrentUser -Force
-Import-Module posh-git
+# Import-Module posh-git
 
-$ThemePath = Join-Path $env:USERPROFILE ".config\powershell"
-$Theme = Join-Path $ThemePath "spaceship.omp.json"
+# $ThemePath = Join-Path $env:USERPROFILE ".config\powershell"
+# $Theme = Join-Path $ThemePath "spaceship.omp.json"
 
-oh-my-posh init pwsh --config $Theme | Invoke-Expression
+# oh-my-posh init pwsh --config $Theme | Invoke-Expression
+
+# Starship (https://starship.rs)
+# winget install --id Starship.Starship
+$env:STARSHIP_CONFIG = Join-Path $env:USERPROFILE ".config\powershell\starship.toml"
+Invoke-Expression (&starship init powershell)
 
 # Terminal-Icons
 # Install-Module -Name Terminal-Icons -Repository PSGallery
@@ -26,7 +31,8 @@ $env:GIT_SSH = "C:\Windows\system32\OpenSSH\ssh.exe"
 
 # Aliases
 Set-Alias grep findstr
-Set-Alias code code-insiders
+# Only when using "Visual Studio Code Insiders"
+# Set-Alias code code-insiders
 
 # Utilities
 function which ($command) {
