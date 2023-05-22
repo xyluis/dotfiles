@@ -28,6 +28,11 @@ symbol = " "
 [git_branch]
 symbol = " "
 
+[git_status]
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+
 [golang]
 symbol = " "
 
@@ -54,6 +59,14 @@ symbol = " "
 
 [memory_usage]
 symbol = " "
+
+[character]
+success_symbol = '[❯](bold green)'
+error_symbol = '[❯](bold red)'
+
+[sudo]
+allow_windows = true
+disabled = false
 
 [meson]
 symbol = "喝 "
@@ -104,6 +117,10 @@ SUSE = " "
 Ubuntu = " "
 Unknown = " "
 Windows = " "
+
+[os]
+disabled = false
+style = "bold blue"
 
 [package]
 symbol = " "
